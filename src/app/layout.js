@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Black_Ops_One, Goldman } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +10,17 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+const blackops = Black_Ops_One({
+  variable: "--font-black",
+  subsets: ["latin"],
+  weight: ["400"]
+});
+const goldman = Goldman({
+  variable: "--font-gold",
+  subsets: ["latin"],
+  weight: ["400"]
+
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -20,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${blackops.variable} ${goldman.variable} antialiased`}
       >
         {children}
       </body>
