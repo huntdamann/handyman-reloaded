@@ -8,12 +8,14 @@ export default function Hero() {
   return (
     <>
 
-     <section className="flex bg-black w-full text-white min-h-screen">
+     <section className="flex bg-black w-full lg:w-screen text-white min-h-screen">
 
-        <div className="flex w-full gap-5 relative flex-col items-center justify-center text-center lg:pl-[4rem] pt-5 px-3 lg:pt-[11rem] ">
+      <video className="inset-0 absolute w-full h-full opacity-60 object-cover" autoPlay muted loop playsInline poster="/fallback.jpg" src="/video/stock_video-2.mp4"/>
 
 
-         <video className="inset-0 absolute opacity-60 object-cover" autoPlay muted loop playsInline poster="/fallback.jpg" src="/video/stock_video-2.mp4"/>
+        <div className="flex w-full gap-5 relative flex-col items-center  justify-center text-center lg:pl-[4rem] pt-5 px-3 lg:pt-[11rem] ">
+
+
 
             <div className="relative bg-transparent flex flex-col gap-5 justify-center items-center ">
               <span className="lg:absolute lg:top-10 lg:left-[35rem]">

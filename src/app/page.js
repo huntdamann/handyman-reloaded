@@ -124,56 +124,95 @@ export default function Home() {
       <Header open={open} setOpen={openMenu}  />
       
       <Hero />
-      <InfoSection title={infoDescriptions[0].title} description={infoDescriptions[0].description} />
-      <PhotoShowcase photo={'/stock_tools.jpg'} />
-      <InfoSection title={infoDescriptions[1].title} description={infoDescriptions[1].description} />
-      <PhotoShowcase photo={'/stock_paint.jpg'} />
-      <InfoSection title={infoDescriptions[2].title} description={infoDescriptions[2].description} />
+      <section className="flex bg-slate-950 text-white min-h-60%">
 
-      <PhotoShowcase photo={'/stock_phone.jpg'} />
-      <InfoSection title={infoDescriptions[2].title} description={infoDescriptions[2].description} />
+        <div className="flex w-full gap-5 relative flex-col items-center justify-center text-center p-[5rem] ">
 
-      <section className="flex bg-slate-950 flex-col justify-center items-center text-white aspect-square">
+            <h2 className="">
+                fjaslkjfdlskjf
+            </h2>
 
-        
-          <motion.div initial={{y: 100, opacity: 0}} whileInView={{y:0, opacity: 1}} className="lg:absolute  lg:right-[10rem]">
+            <span className="lg:w-[38rem] text-lg"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, nemo! Molestias iste quo natus ducimus sapiente libero ipsam, in, et eligendi, quae doloremque veritatis. Saepe nihil quibusdam eos hic iste! </span>
+            
 
-            <Image className="" src='/Handyman-Headerr.webp' width={275} height={60} alt="Handy Man Logo" />
+        </div>
 
-          </motion.div>
 
       </section>
 
-      <section className="flex bg-black w-full text-white aspect-square">
+      <section className="bg-slate-950 text-white py-12 px-4">
+  <div
+    className="
+      grid 
+      grid-cols-1          
+      sm:grid-cols-2      
+      lg:grid-cols-3    
+      gap-6 
+      max-w-6xl            
+      mx-auto             
+    "
+  >
+    <PhotoShowcase photo="/stock_tools.jpg" />
+    <PhotoShowcase photo="/stock_phone.jpg" />
+    <PhotoShowcase photo="/stock_paint.jpg" />
 
-      <div className="flex  w-full gap-5 relative flex-col  lg:pl-[4rem] pt-5 px-5 lg:pt-[11rem] ">
-
-          <span className="lg:absolute lg:top-10 lg:left-[35rem]">
-            Meet Handy
-          </span>
-
-          <span className="lg:w-[38rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur omnis rem suscipit id. Accusantium cumque eos blanditiis consequuntur non! Exercitationem, iusto atque vitae fuga in eos quas deleniti quo possimus.
-          Sapiente vero sunt minima quaerat quis, tempore temporibus unde atque beatae amet dicta debitis dolores, </span>
-          <div className="flex justify-start gap-6 lg:w-[20rem]">
-              <button className="border rounded-2xl border-blue-500 bg-blue-400 hover:bg-black p-2 w-[7rem]">Book Now</button>
-
-          </div>
-      {/* 
-          <motion.div initial={{y: 100, opacity: 0}} animate={{y:0, opacity: 1}} className="lg:absolute  lg:right-[10rem]">
-
-          <Image className="" src='/Handyman-Headerr.webp' width={405} height={60} alt="Handy Man Logo" />
-
-          </motion.div>
-          */}
+    <InfoSection
+      title={infoDescriptions[2].title}
+      description={infoDescriptions[2].description}
+    />
+    <InfoSection
+      title={infoDescriptions[1].title}
+      description={infoDescriptions[1].description}
+    />
+    <InfoSection
+      title={infoDescriptions[0].title}
+      description={infoDescriptions[0].description}
+    />
+  </div>
+</section>
 
 
-      </div>
+    
+    
+
+<section className="flex flex-col lg:flex-row bg-black justify-between items-center w-full px-6 py-16 lg:p-20 min-h-screen text-white">
+  {/* Text Section */}
+  <div className="flex flex-col gap-5 max-w-xl text-center lg:text-left">
+    <h2 className="text-3xl sm:text-4xl font-semibold">Meet Handy</h2>
+
+    <p className="text-base sm:text-lg leading-relaxed text-gray-300">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur omnis rem suscipit id.
+      Accusantium cumque eos blanditiis consequuntur non! Exercitationem, iusto atque vitae fuga in eos quas
+      deleniti quo possimus. Sapiente vero sunt minima quaerat quis, tempore temporibus unde atque beatae amet dicta
+      debitis dolores.
+    </p>
+
+    <div className="flex justify-center lg:justify-start mt-4">
+      <button className="border rounded-2xl border-blue-500 bg-blue-400 hover:bg-transparent transition-colors duration-300 p-3 px-6 font-semibold">
+        Book Now
+      </button>
+    </div>
+  </div>
+
+  {/* Image Section */}
+  <motion.div
+    initial={{ y: 100, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
+    className="mt-10 lg:mt-0 flex justify-center"
+  >
+    <Image
+      src="/Handyman-Headerr.webp"
+      width={350}
+      height={350}
+      alt="Handy Man Logo"
+      className="w-64 sm:w-80 lg:w-[22rem] h-auto object-contain"
+    />
+  </motion.div>
+</section>
 
 
-    </section>
-
-
-      <footer className="text-white min-h-[60dvh] p-6 flex  gap-[2rem] flex-col">
+      <footer className="text-white  p-[6rem]  flex lg:flex-row  gap-[2rem] flex-col">
 
 
           <span>
@@ -181,7 +220,7 @@ export default function Home() {
           </span>
 
           <div className="flex flex-col">
-            <span className="underline">reservations@handyman.com</span>
+            <span className="underline cursor-pointer">reservations@handyman.com</span>
             <span>Dallas</span>
           </div>
 
@@ -191,8 +230,8 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col uppercase">
-            <span>Consulting</span>
-            <span>Privacy Policy</span>
+            <span className="cursor-pointer">Consulting</span>
+            <span className="cursor-pointer">Privacy Policy</span>
           </div>
 
 
